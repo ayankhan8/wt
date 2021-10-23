@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aadhar Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <header id="main-header">
+        <h1>UPDATE AADHAR</h1>
+      </header>
+
+      <form ngNativeValidate class="my-form">
+        <div class="form-module">
+          <label>Username :</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            [(ngModel)]="username"
+            required
+          />
+        </div>
+        <div class="form-module">
+          <label for="password">Password :</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            [(ngModel)]="password"
+            required
+          />
+        </div>
+        
+        <div class="button-module">
+          <button class="my-button" (click)="register()">Register</button
+          >&nbsp;&nbsp;
+          <button class="my-button" (click)="onLogin()">Login</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

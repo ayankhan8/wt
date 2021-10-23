@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aadhaar Updation Portal</title>
+  </head>
+  <body>
+    <div class="container">
+      <header id="main-header">
+        <h1>ENTER THE INFORMATION TO BE UPDATED</h1>
+      </header>
+      
+      <div class="username-block" style="text-align:center">
+        <label for="username" style="font-size: 25px;">Enter your username</label>
+        <input
+          type="text"
+          name="username"
+          [(ngModel)]="username"
+        /><br />
+      </div>
+      <div class="updation-block">
+        <ul class="updates" *ngFor="let placeholder of placeholders">
+            <label for="name_box" >{{placeholder.name}}</label><br>
+            <input #name_box class="my-button" type="text">
+            <button class="my-button" (click)="addskill(name_box.value)">
+              add
+            </button>
+            <br>
+        </ul>
+      </div>
+      <button class="my-button" (click)="update_aadhar()">
+        Update My Aadhar</button>&nbsp;&nbsp;
+
+      <button class="my-button" (click)="display_aadhar()">
+        Display Aadhar Details
+      </button>
+
+    </div>
+  </body>
+</html>

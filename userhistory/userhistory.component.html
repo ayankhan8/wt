@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Applicant Data</title>
+  </head>
+  <body>
+    <h1>HERE ARE YOUR CURRENTLY UPDATED DETAILS: </h1>
+
+    <ul *ngFor="let user of userdetails">
+      {{
+        user.username
+      }}
+      <li *ngFor="let placeholder of user.placeholders">
+        {{ placeholder }}
+      </li>
+      <br />
+    </ul>
+  </body>
+</html>
